@@ -14,4 +14,7 @@ public interface GameRepository extends JpaRepository<Game,Long> {
     @Query(value = "update t_game set level=?2 where id=?1",nativeQuery = true)
     @Modifying
     void updateLevelById(Long id,String level);
+
+
+    //void deleteById(Long id);
 }

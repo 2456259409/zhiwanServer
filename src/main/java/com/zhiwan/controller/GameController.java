@@ -23,8 +23,8 @@ public class GameController {
 
     @RequestMapping(value = "/deleteGame",method = RequestMethod.POST,produces = "application/json;charset=UTF-8")
     public String deldteGame(@RequestBody JSONObject json){
-        Game game=JSONObject.toJavaObject(json,Game.class);
-        gameServiceImp.deleteGame(game);
+        Long id=json.getLong("gameId");
+        gameServiceImp.deleteById(id);
         return Result.Out("删除成功",200);
     }
 

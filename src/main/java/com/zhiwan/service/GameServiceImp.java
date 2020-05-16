@@ -43,5 +43,10 @@ public class GameServiceImp implements GameService {
         gameRepository.updateLevelById(id,level);
     }
 
+    @Override
+    public void deleteById(Long id) {
+        gameRepository.deleteById(id);
+    }
+
 
 }

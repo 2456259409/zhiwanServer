@@ -10,4 +10,5 @@ public interface GameService {
     void deleteGame(Game game);
     Game findByUserIdAndAndGameNameAndAndLevel(Long userId,String gameName,String level);
     void updateLevelById(Long id,String level);
+    void deleteById(Long id);
 }
